@@ -1,6 +1,7 @@
 package com.wipro.model;
 
 import java.io.Serializable;
+import java.util.Date;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -11,7 +12,7 @@ import lombok.Data;
 
 @Data
 @Entity
-public class Usuario implements Serializable {
+public class Movimentacao implements Serializable {
 
 	private static final long serialVersionUID = 1L;
 
@@ -19,14 +20,10 @@ public class Usuario implements Serializable {
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	Integer id;
 
-	String nome;
-
-	String email;
-
-	String senha;
-
-	String sobrenome;
-
 	String cartao;
+
+	Double valor;
+
+	Date data;
 
 }
